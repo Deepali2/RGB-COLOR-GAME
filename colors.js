@@ -25,6 +25,7 @@ easyBtn.addEventListener("click", function() {
     if(colors[i]) squares[i].style.backgroundColor = colors[i];
     else squares[i].style.display = "none";
   }
+  messageDisplay.textContent = '';
 });
 
 // code for when the hard level is chosen
@@ -39,8 +40,10 @@ hardBtn.addEventListener("click", function() {
     squares[i].style.backgroundColor = colors[i];
     squares[i].style.display = "block";
   } 
+  messageDisplay.textContent = '';
 });
 
+//reset button
 resetButton.addEventListener("click", function() {  
   //generate all new colors  
   colors = generateRandomColors(numSquares);
@@ -58,7 +61,7 @@ resetButton.addEventListener("click", function() {
   //reset the text of the message display to empty
   messageDisplay.textContent = '';
   //reset the background color of the h1 to the original color
-  h1.style.backgroundColor = "#232323";
+  h1.style.backgroundColor = "steelblue";
 })
 
 colorDisplay.textContent = pickedColor;
