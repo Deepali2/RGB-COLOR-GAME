@@ -58,9 +58,7 @@ button {
   outline: none;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  
-  /* background: none; */
+  -moz-transition: all 0.3s; 
 }
 
 button:hover {
@@ -70,5 +68,5 @@ button:hover {
 
 #message {
   display: inline-block;
-  width: 20%;
+  width: 10%;
 }

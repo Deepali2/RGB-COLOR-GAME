@@ -1,5 +1,7 @@
 let numSquares = 6;
 let easyNumSquares = 3;
+let veryHardNumSquares = 9;
+let master = 12;
 let colors = [];
 let pickedColor;
 
@@ -26,10 +28,14 @@ function init() {
 function setupModeButtons() {
   for (var i = 0; i < modeButtons.length; i++) {
     modeButtons[i].addEventListener("click", function() { 
-      modeButtons[0].classList.remove("selected"); 
-      modeButtons[1].classList.remove("selected");  
+      for (let i = 0; i < modeButtons.length; i++) {
+        modeButtons[i].classList.remove("selected");
+      }       
       this.classList.add("selected");
-      this.textContent === "Easy" ? numSquares = easyNumSquares: numSquares = 6;
+      this.textContent === "Easy" ? numSquares = easyNumSquares
+        : this.textContent === "Very Hard" ? numSquares = veryHardNumSquares
+        : this.textContent === "Master" ? numSquares = master
+        : numSquares = 6;
       reset();    
     });
   }
